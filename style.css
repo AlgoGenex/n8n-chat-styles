@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
 @charset "UTF-8";
+.n8n-chat {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .n8n-chat pre code.hljs {
 	display: block;
 	overflow-x: auto;
@@ -76,7 +82,7 @@
 }
 
 :root {
-	--chat--color-primary: #e74266;
+	--chat--color-primary: #88070A;
 	--chat--color-primary-shade-50: #db4061;
 	--chat--color-primary-shade-100: #cf3c5c;
 	--chat--color-secondary: #20b69e;
@@ -103,7 +109,7 @@
 	--chat--window--margin-bottom: var(--chat--spacing);
 	--chat--header-height: auto;
 	--chat--header--padding: var(--chat--spacing);
-	--chat--header--background: var(--chat--color-dark);
+	--chat--header--background: var(--chat--color-primary);
 	--chat--header--color: var(--chat--color-light);
 	--chat--header--border-top: none;
 	--chat--header--border-bottom: none;
