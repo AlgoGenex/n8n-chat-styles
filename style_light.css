@@ -157,7 +157,7 @@
 	--chat--button--border-radius: var(--chat--border-radius);
 	--chat--button--hover--color: var(--chat--color-light);
 	--chat--button--hover--background: var(--chat--color-primary-shade-50);
-	--chat--close--button--color-hover: var(--chat--color-primary);
+	--chat--close--button--color-hover: var(--chat--color-white);
 	--chat--input--send--button--background: var(--chat--color-primary);
 	--chat--input--send--button--color: var(--chat--color-light);
 	--chat--input--send--button--background-hover: var(--chat--color-primary-shade-50);
