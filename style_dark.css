@@ -104,7 +104,7 @@
 	--chat--window--bottom: var(--chat--spacing);
 	--chat--window--right: var(--chat--spacing);
 	--chat--window--z-index: 9999;
-	--chat--window--border: 1px solid var(--chat--color-light-shade-50);
+	--chat--window--border: 1px solid var(--chat--color-dark-shade-50);
 	--chat--window--border-radius: 20px;
 	--chat--window--margin-bottom: var(--chat--spacing);
 	--chat--header-height: auto;
@@ -117,11 +117,11 @@
 	--chat--header--border-right: none;
 	--chat--heading--font-size: 2em;
 	--chat--subtitle--font-size: inherit;
-	--chat--subtitle--line-height: 1.8;
+	--chat--subtitle--line-height: 1;
 	--chat--message--font-size: 1rem;
 	--chat--message--padding: var(--chat--spacing);
 	--chat--message--border-radius: 20px;
-	--chat--message-line-height: 1.5;
+	--chat--message-line-height: 1;
 	--chat--message--margin-bottom: calc(var(--chat--spacing) * 1);
 	--chat--message--bot--background: #292c38;
 	--chat--message--bot--color: #ffffff;
