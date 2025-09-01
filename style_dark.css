@@ -161,7 +161,7 @@
 	--chat--input--send--button--background: var(--chat--color-primary);
 	--chat--input--send--button--color: var(--chat--color-white);
 	--chat--input--send--button--background-hover: var(--chat--color-light);
-	--chat--input--send--button--color-hover: var(--chat--color-secondary-shade-50);
+	--chat--input--send--button--color-hover: var(--chat--color-light);
 	--chat--input--file--button--background: var(--chat--color-white);
 	--chat--input--file--button--color: var(--chat--color-secondary);
 	--chat--input--file--button--background-hover: var(--chat--input--file--button--background);
@@ -887,8 +887,13 @@ body[data-theme=dark] .hljs-deletion {
 	color: var(--chat--color-disabled);
 }
 
-.chat-input-send-button .chat-input-send-button[data-v-de5e7961]:hover, .chat-input-send-button .chat-input-send-button[data-v-de5e7961]:focus, .chat-input-file-button .chat-input-send-button[data-v-de5e7961]:hover, .chat-input-file-button .chat-input-send-button[data-v-de5e7961]:focus {
-	background: var(--chat--input--send--button--background-hover, var(--chat--input--send--button--background));
+.chat-input-send-button, .chat-input-send-button, .chat-input-file-button, .chat-input-file-button {
+	background: var(--chat--input--send--button--background);
+	color: var(--chat--input--send--button--color);
+}
+
+.chat-input-send-button[data-v-de5e7961]:hover, .chat-input-send-button[data-v-de5e7961]:focus, .chat-input-send-button[data-v-de5e7961]:hover, .chat-input-send-button[data-v-de5e7961]:focus {
+	background: var(--chat--input--send--button--background-hover);
 	color: var(--chat--input--send--button--color-hover);
 }
 
