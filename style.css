@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
 
 @charset "UTF-8";
 .n8n-chat {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .n8n-chat pre code.hljs {
@@ -105,7 +105,7 @@
 	--chat--window--right: var(--chat--spacing);
 	--chat--window--z-index: 9999;
 	--chat--window--border: 1px solid var(--chat--color-light-shade-50);
-	--chat--window--border-radius: var(--chat--border-radius);
+	--chat--window--border-radius: 20px;
 	--chat--window--margin-bottom: var(--chat--spacing);
 	--chat--header-height: auto;
 	--chat--header--padding: var(--chat--spacing);
@@ -120,13 +120,13 @@
 	--chat--subtitle--line-height: 1.8;
 	--chat--message--font-size: 1rem;
 	--chat--message--padding: var(--chat--spacing);
-	--chat--message--border-radius: var(--chat--border-radius);
+	--chat--message--border-radius: 20px;
 	--chat--message-line-height: 1.5;
 	--chat--message--margin-bottom: calc(var(--chat--spacing) * 1);
 	--chat--message--bot--background: var(--chat--color-white);
 	--chat--message--bot--color: var(--chat--color-dark);
 	--chat--message--bot--border: none;
-	--chat--message--user--background: var(--chat--color-secondary);
+	--chat--message--user--background: var(--chat--color-primary);
 	--chat--message--user--color: var(--chat--color-white);
 	--chat--message--user--border: none;
 	--chat--message--pre--background: rgba(0,0,0,.05);
