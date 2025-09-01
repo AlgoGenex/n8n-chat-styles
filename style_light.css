@@ -117,11 +117,11 @@
 	--chat--header--border-right: none;
 	--chat--heading--font-size: 2em;
 	--chat--subtitle--font-size: inherit;
-	--chat--subtitle--line-height: 1.8;
+	--chat--subtitle--line-height: 1;
 	--chat--message--font-size: 1rem;
 	--chat--message--padding: var(--chat--spacing);
 	--chat--message--border-radius: 20px;
-	--chat--message-line-height: 1.5;
+	--chat--message-line-height: 1;
 	--chat--message--margin-bottom: calc(var(--chat--spacing) * 1);
 	--chat--message--bot--background: var(--chat--color-white);
 	--chat--message--bot--color: var(--chat--color-dark);
