@@ -95,7 +95,7 @@
 	--chat--color-dark: #101330;
 	--chat--color-disabled: #ffffff;
 	--chat--color-typing: #404040;
-	--chat--spacing: 1rem;
+	--chat--spacing: 0.5rem;
 	--chat--border-radius: .25rem;
 	--chat--transition-duration: .15s;
 	--chat--font-family: ( -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif );
