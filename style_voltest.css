@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
 
-@charset "UTF-8";
 .n8n-chat {
   font-family: 'Source Sans Pro', sans-serif;
 }
-
 .n8n-chat pre code.hljs {
 	display: block;
 	overflow-x: auto;
@@ -82,10 +80,10 @@
 }
 
 :root {
-	--chat--color-primary: #145090;
-	--chat--color-primary-shade-50: #4794E6;
-	--chat--color-primary-shade-100: #4794E6;
-	--chat--color-secondary: #4794E6;
+	--chat--color-primary: #AAAAAA;
+	--chat--color-primary-shade-50: #0F4173;
+	--chat--color-primary-shade-100: #0F4173;
+	--chat--color-secondary: #0F4173;
 	--chat--color-secondary-shade-50: #4794E6;
 	--chat--color-white: #ffffff;
 	--chat--color-light: #f2f4f8;
@@ -110,24 +108,24 @@
 	--chat--header-height: auto;
 	--chat--header--padding: var(--chat--spacing);
 	--chat--header--background: var(--chat--color-primary);
-	--chat--header--color: var(--chat--color-light);
+	--chat--header--color: var(--chat--color-secondary);
 	--chat--header--border-top: none;
 	--chat--header--border-bottom: none;
 	--chat--header--border-left: none;
 	--chat--header--border-right: none;
 	--chat--heading--font-size: 2em;
 	--chat--subtitle--font-size: inherit;
-	--chat--subtitle--line-height: 1;
+	--chat--subtitle--line-height: 0;
 	--chat--message--font-size: 1rem;
 	--chat--message--padding: var(--chat--spacing);
 	--chat--message--border-radius: 20px;
 	--chat--message-line-height: 1;
 	--chat--message--margin-bottom: calc(var(--chat--spacing) * 1);
 	--chat--message--bot--background: var(--chat--color-white);
-	--chat--message--bot--color: var(--chat--color-dark);
+	--chat--message--bot--color: var(--chat--color-secondary);
 	--chat--message--bot--border: none;
-	--chat--message--user--background: var(--chat--color-primary);
-	--chat--message--user--color: var(--chat--color-white);
+	--chat--message--user--background: var(--chat--color-secondary);
+	--chat--message--user--color: var(--chat--color-light);
 	--chat--message--user--border: none;
 	--chat--message--pre--background: rgba(0,0,0,.05);
 	--chat--messages-list--padding: var(--chat--spacing);
@@ -857,7 +855,7 @@ body[data-theme=dark] .hljs-deletion {
 }
 
 .chat-inputs textarea[data-v-de5e7961]:focus, .chat-inputs textarea[data-v-de5e7961]:hover {
-	outline: none;
+	 outline: none;
     box-shadow: none;
     border-color: initial;
 }
@@ -949,6 +947,17 @@ body[data-theme=dark] .hljs-deletion {
 	border-right: var(--chat--header--border-right);
 }
 
+.chat-layout .chat-header::before {
+  content: '';
+  display: inline-block;
+  width: 150px;   /* adjust size */
+  height: 40px;
+  background: url('https://github.com/AlgoGenex/AlgoGenex.github.io/blob/main/demo/voltest_logo.png?raw=true') no-repeat center/contain;
+  flex-shrink: 0;   /* prevent logo from shrinking */
+  margin-top: 0;
+}
+
+
 .chat-layout .chat-header h1 {
 	font-size: var(--chat--heading--font-size);
 	color: var(--chat--header--color);
@@ -957,6 +966,7 @@ body[data-theme=dark] .hljs-deletion {
 .chat-layout .chat-header p {
 	font-size: var(--chat--subtitle--font-size);
 	line-height: var(--chat--subtitle--line-height);
+   font-weight: 600;
 }
 
 .chat-layout .chat-body {
@@ -2118,8 +2128,9 @@ ul.user-stack-list li:hover {
   right: 20px;    
   bottom: 105px;   
   background: var(--chat--color-primary);
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  color: var(--chat--color-secondary);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
   font-size: 14px;
   padding: 8px 12px;
   border-radius: 16px;
@@ -2149,4 +2160,25 @@ ul.user-stack-list li:hover {
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+.n8n-chat::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+.n8n-chat::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--chat--color-primary); 
+  border-radius: 10px;
+}
+
+/* Handle */
+.n8n-chat::-webkit-scrollbar-thumb {
+  background: var(--chat--color-primary); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.n8n-chat::-webkit-scrollbar-thumb:hover {
+  background: var(--chat--color-primary); 
 }
