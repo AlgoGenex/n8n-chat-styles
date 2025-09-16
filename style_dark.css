@@ -104,7 +104,7 @@
 	--chat--window--bottom: var(--chat--spacing);
 	--chat--window--right: var(--chat--spacing);
 	--chat--window--z-index: 9999;
-	--chat--window--border: 1px solid var(--chat--color-dark-shade-50);
+	--chat--window--border: 0px solid var(--chat--color-dark-shade-50);
 	--chat--window--border-radius: 20px;
 	--chat--window--margin-bottom: var(--chat--spacing);
 	--chat--header-height: auto;
