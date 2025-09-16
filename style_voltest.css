@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Arial');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
 
 @charset "UTF-8";
 .n8n-chat {
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .n8n-chat pre code.hljs {
