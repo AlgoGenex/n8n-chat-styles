@@ -107,7 +107,7 @@
 	--chat--window--border: 0px solid var(--chat--color-light-shade-50);
 	--chat--window--border-radius: 20px;
 	--chat--window--margin-bottom: var(--chat--spacing);
-	--chat--header-height: 100px;
+	--chat--header-height: auto;
 	--chat--header--padding: var(--chat--spacing);
 	--chat--header--background: var(--chat--color-primary);
 	--chat--header--color: var(--chat--color-light);
@@ -117,7 +117,7 @@
 	--chat--header--border-right: none;
 	--chat--heading--font-size: 2em;
 	--chat--subtitle--font-size: inherit;
-	--chat--subtitle--line-height: 0;
+	--chat--subtitle--line-height: 1;
 	--chat--message--font-size: 1rem;
 	--chat--message--padding: var(--chat--spacing);
 	--chat--message--border-radius: 20px;
