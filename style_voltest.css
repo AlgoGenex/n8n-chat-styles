@@ -107,7 +107,7 @@
 	--chat--window--border: 0px solid var(--chat--color-light-shade-50);
 	--chat--window--border-radius: 20px;
 	--chat--window--margin-bottom: var(--chat--spacing);
-	--chat--header-height: 100px;
+	--chat--header-height: auto;
 	--chat--header--padding: var(--chat--spacing);
 	--chat--header--background: var(--chat--color-primary);
 	--chat--header--color: var(--chat--color-light);
