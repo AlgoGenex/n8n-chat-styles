@@ -106,7 +106,7 @@
 	--chat--window--border: 0px solid var(--chat--color-light-shade-50);
 	--chat--window--border-radius: 20px;
 	--chat--window--margin-bottom: var(--chat--spacing);
-	--chat--header-height: auto;
+	--chat--header-height: 100px;
 	--chat--header--padding: var(--chat--spacing);
 	--chat--header--background: var(--chat--color-white);
 	--chat--header--color: var(--chat--color-secondary);
@@ -144,7 +144,7 @@
 	--chat--input--font-size: 15px;
 	--chat--input--border: 0;
 	--chat--input--border-radius: 0;
-	--chat--input--padding: .8rem;
+	--chat--input--padding: 13.5px;
 	--chat--input--background: var(--chat--color-white);
 	--chat--input--text-color: initial;
 	--chat--input--line-height: 1.5;
@@ -938,7 +938,7 @@ body[data-theme=dark] .hljs-deletion {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 1em;
+	gap: 5px;
 	height: var(--chat--header-height);
 	padding: var(--chat--header--padding);
 	background: var(--chat--header--background);
