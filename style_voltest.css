@@ -2172,7 +2172,7 @@ ul.user-stack-list li:hover {
 #n8n-chat h2,
 #n8n-chat [class*="header"] :is(h1,h2,h3) {
 font-size: 18px;          /* adjust to taste */
-line-height: 1;
+line-height: 0;
 font-weight: 700;
 }
 
@@ -2201,6 +2201,7 @@ line-height: 1 !important;
 #n8n-chat input::placeholder,
 #n8n-chat textarea::placeholder {
 font-size: 14px !important;
+line-height: 1 !important;
 }
 
 /* Our optional helper bubble */
