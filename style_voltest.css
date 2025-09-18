@@ -144,7 +144,7 @@
 	--chat--input--font-size: 15px;
 	--chat--input--border: 0;
 	--chat--input--border-radius: 0;
-	--chat--input--padding: .8rem;
+	--chat--input--padding: 8px 12px;
 	--chat--input--background: var(--chat--color-white);
 	--chat--input--text-color: initial;
 	--chat--input--line-height: 1.5;
