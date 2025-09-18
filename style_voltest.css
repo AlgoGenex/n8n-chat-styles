@@ -115,9 +115,9 @@
 	--chat--header--border-left: none;
 	--chat--header--border-right: none;
 	--chat--heading--font-size: 20px;
-	--chat--subtitle--font-size: 16px;
+	--chat--subtitle--font-size: 15px;
 	--chat--subtitle--line-height: 1;
-	--chat--message--font-size: 16px;
+	--chat--message--font-size: 15px;
 	--chat--message--padding: var(--chat--spacing);
 	--chat--message--border-radius: 20px;
 	--chat--message-line-height: 1.5;
@@ -141,7 +141,7 @@
 	--chat--toggle--color: var(--chat--color-white);
 	--chat--textarea--height: 50px;
 	--chat--textarea--max-height: 30rem;
-	--chat--input--font-size: 16px;
+	--chat--input--font-size: 15px;
 	--chat--input--border: 0;
 	--chat--input--border-radius: 0;
 	--chat--input--padding: .8rem;
