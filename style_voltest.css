@@ -144,7 +144,7 @@
 	--chat--input--font-size: 15px;
 	--chat--input--border: 0;
 	--chat--input--border-radius: 0;
-	--chat--input--padding: 8px 12px;
+	--chat--input--padding: .8rem;
 	--chat--input--background: var(--chat--color-white);
 	--chat--input--text-color: initial;
 	--chat--input--line-height: 1.5;
@@ -840,7 +840,7 @@ body[data-theme=dark] .hljs-deletion {
 	width: 100%;
 	border: var(--chat--input--border,0);
 	border-radius: var(--chat--input--border-radius);
-	padding: var(--chat--input--padding);
+	/*padding: var(--chat--input--padding);*/
 	min-height: var(--chat--textarea--height,2.5rem);
 	max-height: var(--chat--textarea--max-height);
 	height: var(--chat--textarea--height,2.5rem);
@@ -854,8 +854,7 @@ body[data-theme=dark] .hljs-deletion {
 
 .chat-inputs textarea[data-v-de5e7961]::placeholder {
 	font-size: var(--chat--input--placeholder--font-size, var(--chat--input--font-size));
-	line-height: var(--chat--input--line-height,1.5);
-	vertical-align: middle;
+	vertical-align: baseline;
 }
 
 .chat-inputs textarea[data-v-de5e7961]:focus, .chat-inputs textarea[data-v-de5e7961]:hover {
