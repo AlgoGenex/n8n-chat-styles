@@ -114,10 +114,10 @@
 	--chat--header--border-bottom: none;
 	--chat--header--border-left: none;
 	--chat--header--border-right: none;
-	--chat--heading--font-size: 2em;
-	--chat--subtitle--font-size: inherit;
+	--chat--heading--font-size: 20px;
+	--chat--subtitle--font-size: 15px;
 	--chat--subtitle--line-height: 1;
-	--chat--message--font-size: 1rem;
+	--chat--message--font-size: 15px;
 	--chat--message--padding: var(--chat--spacing);
 	--chat--message--border-radius: 20px;
 	--chat--message-line-height: 1;
@@ -141,13 +141,13 @@
 	--chat--toggle--color: var(--chat--color-white);
 	--chat--textarea--height: 50px;
 	--chat--textarea--max-height: 30rem;
-	--chat--input--font-size: inherit;
+	--chat--input--font-size: 15px;
 	--chat--input--border: 0;
 	--chat--input--border-radius: 0;
 	--chat--input--padding: .8rem;
 	--chat--input--background: var(--chat--color-white);
 	--chat--input--text-color: initial;
-	--chat--input--line-height: 1.5;
+	--chat--input--line-height: 1;
 	--chat--input--placeholder--font-size: var(--chat--input--font-size);
 	--chat--input--border-active: 0;
 	--chat--input--left--panel--width: 2rem;
@@ -2163,49 +2163,4 @@ ul.user-stack-list li:hover {
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Font FIX */
-/* ====== FONTS ONLY (no layout/height/width changes) ====== */
-/* Header/title sizing */
-#n8n-chat h1,
-#n8n-chat h2,
-#n8n-chat [class*="header"] :is(h1,h2,h3) {
-font-size: 18px;          /* adjust to taste */
-line-height: 0;
-font-weight: 700;
-}
-
-/* Subtitle under the title */
-#n8n-chat [class*="header"] p,
-#n8n-chat [class*="subtitle"] {
-font-size: 14px;
-line-height: 1.5;
-}
-
-/* Messages (chat bubbles) */
-#n8n-chat .message,
-#n8n-chat .messages .message,
-#n8n-chat [class*="message"],
-#n8n-chat [class*="bubble"] {
-font-size: 14px !important;
-line-height: 1.55 !important;
-}
-
-/* Input and placeholder */
-#n8n-chat input,
-#n8n-chat textarea {
-font-size: 14px !important;
-line-height: 1 !important;
-}
-#n8n-chat input::placeholder,
-#n8n-chat textarea::placeholder {
-font-size: 14px !important;
-line-height: 1 !important;
-}
-
-/* Our optional helper bubble */
-#n8n-chat .chat-helper-bubble {
-font-size: 14px !important;
-line-height: 1 !important;
 }
