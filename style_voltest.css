@@ -850,6 +850,7 @@ body[data-theme=dark] .hljs-deletion {
 	color: var(--chat--input--text-color,initial);
 	outline: none;
 	line-height: var(--chat--input--line-height,1.5);
+	vertical-align: baseline;
 }
 
 .chat-inputs textarea[data-v-de5e7961]::placeholder {
