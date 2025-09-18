@@ -938,7 +938,7 @@ body[data-theme=dark] .hljs-deletion {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 1em;
+	gap: 5px;
 	height: var(--chat--header-height);
 	padding: var(--chat--header--padding);
 	background: var(--chat--header--background);
