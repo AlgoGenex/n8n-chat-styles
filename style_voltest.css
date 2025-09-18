@@ -854,6 +854,8 @@ body[data-theme=dark] .hljs-deletion {
 
 .chat-inputs textarea[data-v-de5e7961]::placeholder {
 	font-size: var(--chat--input--placeholder--font-size, var(--chat--input--font-size));
+	line-height: var(--chat--input--line-height,1.5);
+	vertical-align: middle;
 }
 
 .chat-inputs textarea[data-v-de5e7961]:focus, .chat-inputs textarea[data-v-de5e7961]:hover {
