@@ -115,9 +115,9 @@
 	--chat--header--border-left: none;
 	--chat--header--border-right: none;
 	--chat--heading--font-size: 20px;
-	--chat--subtitle--font-size: 15px;
+	--chat--subtitle--font-size: 16px;
 	--chat--subtitle--line-height: 1;
-	--chat--message--font-size: 15px;
+	--chat--message--font-size: 16px;
 	--chat--message--padding: var(--chat--spacing);
 	--chat--message--border-radius: 20px;
 	--chat--message-line-height: 1;
@@ -141,13 +141,13 @@
 	--chat--toggle--color: var(--chat--color-white);
 	--chat--textarea--height: 50px;
 	--chat--textarea--max-height: 30rem;
-	--chat--input--font-size: 15px;
+	--chat--input--font-size: 16px;
 	--chat--input--border: 0;
 	--chat--input--border-radius: 0;
 	--chat--input--padding: .8rem;
 	--chat--input--background: var(--chat--color-white);
 	--chat--input--text-color: initial;
-	--chat--input--line-height: 1;
+	--chat--input--line-height: 1.5;
 	--chat--input--placeholder--font-size: var(--chat--input--font-size);
 	--chat--input--border-active: 0;
 	--chat--input--left--panel--width: 2rem;
@@ -2134,7 +2134,7 @@ ul.user-stack-list li:hover {
   color: var(--chat--color-white);
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   padding: 8px 12px;
   border-radius: 16px;
   white-space: nowrap;
