@@ -5,23 +5,23 @@
   const sid = localStorage.getItem('n8nChatSid') || crypto.randomUUID();
   localStorage.setItem('n8nChatSid', sid);
 
-  // --- Load chat CSS ---
+  // --- Create Shadow DOM container ---
+  const container = document.createElement("div");
+  container.id = "n8n-chat-container";
+  document.body.appendChild(container);
+
+  const shadow = container.attachShadow({ mode: "open" });
+
+  // --- Load chat CSS inside Shadow DOM ---
   const link = document.createElement("link");
   link.rel = "stylesheet";
   link.href = "https://www.algogenex.com/n8n-chat-styles/style_voltest.css";
-  document.head.appendChild(link);
+  shadow.appendChild(link);
 
-  // --- Load preload image (optional) ---
-  const preload = document.createElement("link");
-  preload.rel = "preload";
-  preload.as = "image";
-  preload.href = "https://github.com/AlgoGenex/AlgoGenex.github.io/blob/main/demo/voltest_logo.png?raw=true";
-  document.head.appendChild(preload);
-
-  // --- Create chat container ---
-  const div = document.createElement("div");
-  div.id = "n8n-chat";
-  document.body.appendChild(div);
+  // --- Create chat div inside Shadow DOM ---
+  const chatDiv = document.createElement("div");
+  chatDiv.id = "n8n-chat";
+  shadow.appendChild(chatDiv);
 
   // --- Import chat bundle and start ---
   import("https://www.algogenex.com/n8n-chat-styles/script.js")
@@ -54,7 +54,7 @@
       });
     });
 
-  // --- Helper bubble ---
+  // --- Helper bubble (outside Shadow DOM) ---
   setTimeout(() => {
     const helper = document.createElement("div");
     helper.className = "chat-helper-bubble";
