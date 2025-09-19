@@ -95,6 +95,7 @@
 	--chat--color-disabled: #ffffff;
 	--chat--color-typing: #404040;
 	--chat--border--color: var(--chat--color-light);
+	--chat--scrollbar--color: #8B8B8B;
 	--chat--spacing: 10px;
 	--chat--border-radius: 2.5px;
 	--chat--transition-duration: .15s;
@@ -2129,6 +2130,18 @@ ul.user-stack-list li:hover {
 	}
 }
 
+/* Customized Scrollbar*/
+.chat-layout .chat-body {
+  overflow-y: scroll;
+  scrollbar-color: var(--chat--scrollbar--color) var(--chat--body--background);
+  scrollbar-width: thin;
+}
+
+.chat-inputs textarea[data-v-de5e7961] {
+  overflow-y: scroll;
+  scrollbar-color: var(--chat--scrollbar--color) var(--chat--footer--background);
+  scrollbar-width: thin;
+}
 
 /* Helper bubble near bottom right above launcher */
 .chat-helper-bubble {
