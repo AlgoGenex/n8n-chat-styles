@@ -94,7 +94,7 @@
 	--chat--color-dark: #101330;
 	--chat--color-disabled: #ffffff;
 	--chat--color-typing: #404040;
-	--chat--border--color: var(--chat--color--light);
+	--chat--border--color: var(--chat--color-light);
 	--chat--spacing: 1rem;
 	--chat--border-radius: .25rem;
 	--chat--transition-duration: .15s;
