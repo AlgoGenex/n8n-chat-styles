@@ -171,6 +171,7 @@
 	--chat--footer--background: var(--chat--color-white);
 	--chat--footer--color: var(--chat--color-dark);
 	--chat--footer--border-top: 1px;
+	--chat--border--color: var(--chat--color-primary);
 }
 
 pre code.hljs {
@@ -944,10 +945,10 @@ body[data-theme=dark] .hljs-deletion {
 	padding: var(--chat--header--padding);
 	background: var(--chat--header--background);
 	color: var(--chat--header--color);
-	border-top: var(--chat--header--border-top) solid var(--chat--color-primary);
-	border-bottom: var(--chat--header--border-bottom) solid var(--chat--color-primary);
-	border-left: var(--chat--header--border-left) solid var(--chat--color-primary);
-	border-right: var(--chat--header--border-right) solid var(--chat--color-primary);
+	border-top: var(--chat--header--border-top) solid var(--chat--border--color);
+	border-bottom: var(--chat--header--border-bottom) solid var(--chat--border--color);
+	border-left: var(--chat--header--border-left) solid var(--chat--border--color);
+	border-right: var(--chat--header--border-right) solid var(--chat--border--color);
 }
 
 .chat-layout .chat-header::before {
@@ -983,7 +984,7 @@ body[data-theme=dark] .hljs-deletion {
 }
 
 .chat-layout .chat-footer {
-	border-top: var(--chat--footer--border-top) solid var(--chat--color-primary);
+	border-top: var(--chat--footer--border-top) solid var(--chat--border--color);
 	background: var(--chat--footer--background);
 	color: var(--chat--footer--color);
 }
