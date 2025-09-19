@@ -168,7 +168,7 @@
 	--chat--input--file--button--color-hover: var(--chat--color-secondary-shade-50);
 	--chat--files-spacing: .25rem;
 	--chat--body--background: var(--chat--color-light);
-	--chat--footer--background: var(--chat--color-light);
+	--chat--footer--background: var(--chat--color-white);
 	--chat--footer--color: var(--chat--color-dark);
 }
 
