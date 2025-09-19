@@ -105,7 +105,7 @@
 	--chat--window--bottom: var(--chat--spacing);
 	--chat--window--right: var(--chat--spacing);
 	--chat--window--z-index: 9999;
-	--chat--window--border: 2px solid var(--chat--border--color);
+	--chat--window--border: 1px solid var(--chat--border--color);
 	--chat--window--border-radius: 20px;
 	--chat--window--margin-bottom: var(--chat--spacing);
 	--chat--header-height: 80px;
@@ -113,7 +113,7 @@
 	--chat--header--background: var(--chat--color-white);
 	--chat--header--color: var(--chat--color-secondary);
 	--chat--header--border-top: none solid var(--chat--border--color);
-	--chat--header--border-bottom: 1px solid var(--chat--border--color);
+	--chat--header--border-bottom: 2px solid var(--chat--border--color);
 	--chat--header--border-left: none solid var(--chat--border--color);
 	--chat--header--border-right: none solid var(--chat--border--color);
 	--chat--heading--font-size: 20px;
