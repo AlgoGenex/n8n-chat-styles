@@ -111,10 +111,10 @@
 	--chat--header--padding: var(--chat--spacing);
 	--chat--header--background: var(--chat--color-white);
 	--chat--header--color: var(--chat--color-secondary);
-	--chat--header--border-top: none;
-	--chat--header--border-bottom: 2px;
-	--chat--header--border-left: none;
-	--chat--header--border-right: none;
+	--chat--header--border-top: none solid var(--chat--border--color);
+	--chat--header--border-bottom: 2px solid var(--chat--border--color);
+	--chat--header--border-left: none solid var(--chat--border--color);
+	--chat--header--border-right: none solid var(--chat--border--color);
 	--chat--heading--font-size: 20px;
 	--chat--subtitle--font-size: 15px;
 	--chat--subtitle--line-height: 1;
@@ -171,7 +171,7 @@
 	--chat--body--background: var(--chat--color-light);
 	--chat--footer--background: var(--chat--color-white);
 	--chat--footer--color: var(--chat--color-dark);
-	--chat--footer--border-top: 2px;
+	--chat--footer--border-top: 2px solid var(--chat--border--color);
 }
 
 pre code.hljs {
@@ -945,10 +945,10 @@ body[data-theme=dark] .hljs-deletion {
 	padding: var(--chat--header--padding);
 	background: var(--chat--header--background);
 	color: var(--chat--header--color);
-	border-top: var(--chat--header--border-top) solid var(--chat--border--color);
-	border-bottom: var(--chat--header--border-bottom) solid var(--chat--border--color);
-	border-left: var(--chat--header--border-left) solid var(--chat--border--color);
-	border-right: var(--chat--header--border-right) solid var(--chat--border--color);
+	border-top: var(--chat--header--border-top);
+	border-bottom: var(--chat--header--border-bottom);
+	border-left: var(--chat--header--border-left);
+	border-right: var(--chat--header--border-right);
 }
 
 .chat-layout .chat-header::before {
@@ -984,7 +984,7 @@ body[data-theme=dark] .hljs-deletion {
 }
 
 .chat-layout .chat-footer {
-	border-top: var(--chat--footer--border-top) solid var(--chat--border--color);
+	border-top: var(--chat--footer--border-top);
 	background: var(--chat--footer--background);
 	color: var(--chat--footer--color);
 }
