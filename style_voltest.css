@@ -979,16 +979,12 @@ body[data-theme=dark] .hljs-deletion {
 	overflow-y: auto;
 	position: relative;
 	min-height: 100px;
-	margin: 0;              /* prevent accidental spacing */
-  	padding-bottom: 0;       /* avoid invisible padding */
 }
 
 .chat-layout .chat-footer {
 	border-top: 1px solid var(--chat--color-light-shade-100);
 	background: var(--chat--footer--background);
 	color: var(--chat--footer--color);
-  	margin: 0;              /* remove unwanted gap */
-  	padding-top: 0;          /* keep tight alignment */
 }
 
 ._strokeWidth_fqxq5_1 rect, ._strokeWidth_fqxq5_1 path {
@@ -1832,6 +1828,9 @@ ul.user-stack-list li:hover {
 	margin-bottom: var(--chat--window--margin-bottom, var(--chat--spacing));
 	overflow: hidden;
 	transform-origin: bottom right;
+	background: var(--chat--body--background); /* or var(--chat--footer--background) depending which blends best */
+  	-webkit-font-smoothing: antialiased;
+  	transform: translateZ(0); /* create its own compositing layer to avoid subpixel repaint issues */
 }
 
 .chat-window-wrapper .chat-window .chat-layout {
