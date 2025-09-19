@@ -94,7 +94,7 @@
 	--chat--color-dark: #101330;
 	--chat--color-disabled: #ffffff;
 	--chat--color-typing: #404040;
-	--chat--border--color: var(--chat--color-primary);
+	--chat--border--color: var(--chat--color--light);
 	--chat--spacing: 1rem;
 	--chat--border-radius: .25rem;
 	--chat--transition-duration: .15s;
@@ -104,7 +104,7 @@
 	--chat--window--bottom: var(--chat--spacing);
 	--chat--window--right: var(--chat--spacing);
 	--chat--window--z-index: 9999;
-	--chat--window--border: 0px solid var(--chat--border--color);
+	--chat--window--border: 2px solid var(--chat--border--color);
 	--chat--window--border-radius: 20px;
 	--chat--window--margin-bottom: var(--chat--spacing);
 	--chat--header-height: 100px;
@@ -112,7 +112,7 @@
 	--chat--header--background: var(--chat--color-white);
 	--chat--header--color: var(--chat--color-secondary);
 	--chat--header--border-top: none;
-	--chat--header--border-bottom: 1px;
+	--chat--header--border-bottom: 2px;
 	--chat--header--border-left: none;
 	--chat--header--border-right: none;
 	--chat--heading--font-size: 20px;
@@ -171,7 +171,7 @@
 	--chat--body--background: var(--chat--color-light);
 	--chat--footer--background: var(--chat--color-white);
 	--chat--footer--color: var(--chat--color-dark);
-	--chat--footer--border-top: 1px;
+	--chat--footer--border-top: 2px;
 }
 
 pre code.hljs {
