@@ -2139,7 +2139,7 @@ ul.user-stack-list li:hover {
 
 .chat-inputs textarea[data-v-de5e7961] {
   overflow-y: scroll;
-  scrollbar-color: var(--chat--scrollbar--color) var(--chat--footer--background);
+  scrollbar-color: var(--chat--footer--background) var(--chat--footer--background);
   scrollbar-width: thin;
 }
 
