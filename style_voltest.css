@@ -950,6 +950,7 @@ body[data-theme=dark] .hljs-deletion {
 	border-bottom: var(--chat--header--border-bottom);
 	border-left: var(--chat--header--border-left);
 	border-right: var(--chat--header--border-right);
+	box-sizing: border-box;
 }
 
 .chat-layout .chat-header::before {
