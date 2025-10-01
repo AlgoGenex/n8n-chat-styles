@@ -15,7 +15,7 @@
   const preload = document.createElement("link");
   preload.rel = "preload";
   preload.as = "image";
-  preload.href = "https://github.com/AlgoGenex/AlgoGenex.github.io/blob/main/demo/effeuno_logo.webp";
+  preload.href = "https://github.com/AlgoGenex/AlgoGenex.github.io/blob/main/demo/effeuno_logo.png";
   document.head.appendChild(preload);
 
   // --- Create chat container ---
