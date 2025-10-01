@@ -2147,7 +2147,7 @@ ul.user-stack-list li:hover {
 /* Helper bubble near bottom right above launcher */
 .chat-helper-bubble {
   position: fixed;
-  right: 20px;    
+  right: 0px;    
   bottom: 105px;   
   background: var(--chat--color-primary);
   color: var(--chat--color-white);
@@ -2167,7 +2167,7 @@ ul.user-stack-list li:hover {
   content: '';
   position: absolute;
   bottom: -10px;
-  right: 16px;
+  right: -4px;
   border-width: 6px;
   border-style: solid;
   border-color: var(--chat--color-primary) transparent transparent transparent;
