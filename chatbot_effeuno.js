@@ -52,7 +52,7 @@
   import('https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js')
     .then(({ createChat }) => {
       createChat({
-        webhookUrl: '',
+        webhookUrl: 'https://n8n.algogenex.com/webhook/ff6c311c-cfeb-4539-ac18-6de3eb238cb1/chat',
         webhookConfig: { method: 'POST', headers: {} },
         // PASS THE ELEMENT (not a selector)
         target: chatDiv,
