@@ -71,7 +71,6 @@
       const finalCss = hostVars + '\n' + cssText + '\n' + `
         /* safety overrides for predictable rendering */
         :host, :host * { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial !important; }
-        .chat-window { display: block !important; opacity: 1 !important; visibility: visible !important; }
       `;
 
       // 4) apply stylesheet using adoptedStyleSheets when available
