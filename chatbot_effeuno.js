@@ -32,7 +32,7 @@
   shadow.appendChild(chatContainer);
 
   // --- Import chat bundle and mount inside shadow ---
-  import("https://www.algogenex.com/n8n-chat-styles/script.js").then(
+  import("https://www.algogenex.com/n8n-chat-styles/script.mod.js").then(
     ({ createChat }) => {
       createChat({
         webhookUrl: "",
