@@ -81,7 +81,7 @@
 }
 
 :root {
-	--chat--color-primary: #1F79E0;
+	--chat--color-primary: #D10018;
 	--chat--color-primary-shade-50: #0F4173;
 	--chat--color-primary-shade-100: #0F4173;
 	--chat--color-secondary: #144D90;
@@ -91,7 +91,7 @@
 	--chat--color-light-shade-50: #e6e9f1;
 	--chat--color-light-shade-100: #c2c5cc;
 	--chat--color-medium: #d2d4d9;
-	--chat--color-dark: #101330;
+	--chat--color-dark: #494949;
 	--chat--color-disabled: #ffffff;
 	--chat--color-typing: #404040;
 	--chat--border--color: var(--chat--color-light);
@@ -169,7 +169,7 @@
 	--chat--input--file--button--background-hover: var(--chat--input--file--button--background);
 	--chat--input--file--button--color-hover: var(--chat--color-secondary-shade-50);
 	--chat--files-spacing: 2.5px;
-	--chat--body--background: var(--chat--color-light);
+	--chat--body--background: var(--chat--color-dark);
 	--chat--footer--background: var(--chat--color-white);
 	--chat--footer--color: var(--chat--color-dark);
 	--chat--footer--border-top: 2px solid var(--chat--border--color);
