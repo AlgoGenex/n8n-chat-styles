@@ -17,9 +17,9 @@
   shadow.appendChild(style);
 
   // --- Create chat container inside Shadow DOM ---
-  const div = document.createElement('div');
-  div.id = 'n8n-chat';
-  shadow.appendChild(div);
+const chatDiv = document.createElement("div");
+chatDiv.id = "n8n-chat";
+shadow.appendChild(chatDiv);
 
   // --- Import chat bundle and start ---
   import("https://www.algogenex.com/n8n-chat-styles/script.js")
@@ -27,7 +27,7 @@
       createChat({
         webhookUrl: "",
         webhookConfig: { method: "POST", headers: {} },
-        target: "#n8n-chat",
+        target: chatDiv,
         mode: "window",
         chatInputKey: "chatInput",
         chatSessionKey: "sessionId",
