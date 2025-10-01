@@ -27823,25 +27823,40 @@ function Qye(e) {
     ...e,
     webhookConfig: {
       ...Ro.webhookConfig,
-      ...e == null ? void 0 : e.webhookConfig
+      ...(e?.webhookConfig)
     },
     i18n: {
       ...Ro.i18n,
-      ...e == null ? void 0 : e.i18n,
+      ...(e?.i18n),
       en: {
-        ...(s = Ro.i18n) == null ? void 0 : s.en,
-        ...(o = e == null ? void 0 : e.i18n) == null ? void 0 : o.en
+        ...(Ro.i18n?.en),
+        ...(e?.i18n?.en)
       }
     },
     theme: {
       ...Ro.theme,
-      ...e == null ? void 0 : e.theme
+      ...(e?.theme)
     }
-  }, n = t.target ?? d3;
-  typeof n == "string" && A3(n);
+  };
+
+  let n = t.target ?? d3;
+
+  // ✅ Modified target resolution
+  if (typeof n === "string") {
+    // original logic: string selector
+    A3(n);  
+  } else if (n instanceof Element) {
+    // already a DOM element (works in Shadow DOM)
+    // nothing to change
+  } else {
+    console.error("Invalid target for chat:", n);
+    return;
+  }
+
   const r = c3(Yye);
   return r.use(F3, t), r.mount(n), r;
 }
+
 export {
   Qye as createChat
 };
