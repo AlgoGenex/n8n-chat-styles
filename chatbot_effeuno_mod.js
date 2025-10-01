@@ -4,7 +4,7 @@
   const sid = localStorage.getItem(SID_KEY) || crypto.randomUUID();
   localStorage.setItem(SID_KEY, sid);
 
-  const cssUrl = 'https://www.algogenex.com/n8n-chat-styles/style_voltest.css'; // change if needed
+  const cssUrl = 'https://www.algogenex.com/n8n-chat-styles/style_effeuno.css'; // change if needed
   const bundleUrl = 'https://www.algogenex.com/n8n-chat-styles/script.js';     // change if needed
 
   // 1) create host and attach shadow root
