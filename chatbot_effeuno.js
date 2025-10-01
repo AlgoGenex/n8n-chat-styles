@@ -2,43 +2,31 @@
 
 (function () {
   // --- Persistent Session ID ---
-  const sid = localStorage.getItem("n8nChatSid") || crypto.randomUUID();
-  localStorage.setItem("n8nChatSid", sid);
+  const sid = localStorage.getItem('n8nChatSid') || crypto.randomUUID();
+  localStorage.setItem('n8nChatSid', sid);
 
-  // --- Create host container ---
-  const host = document.createElement("div");
+  // --- Create host for Shadow DOM ---
+  const host = document.createElement('div');
   document.body.appendChild(host);
+  const shadow = host.attachShadow({ mode: 'open' });
 
-  // --- Attach Shadow DOM ---
-  const shadow = host.attachShadow({ mode: "open" });
+  // --- Load chat CSS inside Shadow DOM ---
+  const style = document.createElement('link');
+  style.rel = 'stylesheet';
+  style.href = 'https://www.algogenex.com/n8n-chat-styles/style_voltest.css';
+  shadow.appendChild(style);
 
-  // --- Load chat CSS INSIDE shadow ---
-  const link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = "https://www.algogenex.com/n8n-chat-styles/style_voltest.css";
-  shadow.appendChild(link);
+  // --- Create chat container inside Shadow DOM ---
+  const div = document.createElement('div');
+  div.id = 'n8n-chat';
+  shadow.appendChild(div);
 
-  // --- Load preload image (optional) ---
-  const preload = document.createElement("link");
-  preload.rel = "preload";
-  preload.as = "image";
-  preload.href =
-    "https://github.com/AlgoGenex/AlgoGenex.github.io/blob/main/demo/voltest_logo.webp";
-  shadow.appendChild(preload);
-
-  // --- Chat container inside shadow ---
-  const chatContainer = document.createElement("div");
-  chatContainer.id = "n8n-chat";
-
-    // --- Import chat bundle and mount inside shadow ---
-  import("https://www.algogenex.com/n8n-chat-styles/script.js").then(
-    ({ createChat }) => {
+  // --- Import chat bundle and start ---
+  import("https://www.algogenex.com/n8n-chat-styles/script.js")
+    .then(({ createChat }) => {
       createChat({
         webhookUrl: "",
-        webhookConfig: {
-          method: "POST",
-          headers: {},
-        },
+        webhookConfig: { method: "POST", headers: {} },
         target: "#n8n-chat",
         mode: "window",
         chatInputKey: "chatInput",
@@ -59,11 +47,9 @@
         },
         enableStreaming: false,
       });
-    }
-  );
-  shadow.appendChild(chatContainer);
+    });
 
-  // --- Helper bubble outside shadow (optional) ---
+  // --- Helper bubble outside Shadow DOM (optional) ---
   setTimeout(() => {
     const helper = document.createElement("div");
     helper.className = "chat-helper-bubble";
