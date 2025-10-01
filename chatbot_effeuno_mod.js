@@ -124,18 +124,6 @@
       enableStreaming: false
     });
 
-    // 6) auto-open (use toggle if present, else force)
-    setTimeout(() => {
-      try {
-        const toggle = sr.querySelector('.chat-window-toggle');
-        if (toggle) { toggle.click(); return; }
-        const win = sr.querySelector('.chat-window');
-        if (win) Object.assign(win.style, { display: 'block', opacity: '1', visibility: 'visible' });
-      } catch (e) {
-        console.warn('n8n: auto-open failed', e);
-      }
-    }, 150);
-
     console.log('n8n: chat mounted inside shadow root');
   } catch (err) {
     console.error('n8n: failed to import/mount chat bundle:', err);
