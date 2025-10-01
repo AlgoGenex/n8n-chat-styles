@@ -1,60 +1,77 @@
-// chat-loader.js
-
-// chat-loader.js
+// production chat-loader.js
 (function () {
-  // --- persistent session id ---
+  // --- Persistent session ID ---
   const sid = localStorage.getItem('n8nChatSid') || crypto.randomUUID();
   localStorage.setItem('n8nChatSid', sid);
 
-  // --- create host and shadow root ---
+  // --- Create host ---
   const host = document.createElement('div');
-  // optionally give host a class so site owners can target it if needed:
   host.className = 'n8n-chat-host';
+  Object.assign(host.style, {
+    position: 'fixed',
+    right: '20px',
+    bottom: '20px',
+    width: '360px',
+    height: '600px',
+    zIndex: '2147483647',
+    display: 'block',
+    pointerEvents: 'auto',
+    overflow: 'visible'
+  });
   document.body.appendChild(host);
-  const shadow = host.attachShadow({ mode: 'open' });
 
-  // --- inject chat CSS into shadow root (scoped) ---
-  const styleLink = document.createElement('link');
-  styleLink.rel = 'stylesheet';
-  // recommended: use the official dist style (CDN) or your hosted CSS
-  styleLink.href = 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css';
-  shadow.appendChild(styleLink);
+  // --- Attach shadow root ---
+  const sr = host.attachShadow({ mode: 'open' });
 
-  // --- optional: small inline safety style to ensure host positioning ---
-  const safetyStyle = document.createElement('style');
-  safetyStyle.textContent = `
-    :host { all: initial; } /* optional: prevents site CSS from affecting host element itself */
-    /* you can keep host visible for debugging */
-  `;
-  // NOTE: :host in shadow's stylesheet references the shadow host element
-  shadow.appendChild(safetyStyle);
-
-  // --- create chat container inside shadow root ---
+  // --- Create chat container inside shadow ---
   const chatDiv = document.createElement('div');
   chatDiv.id = 'n8n-chat';
-  shadow.appendChild(chatDiv);
+  Object.assign(chatDiv.style, { width: '100%', height: '100%', minHeight: '200px' });
+  sr.appendChild(chatDiv);
 
-  // --- helper bubble (keeps it in page DOM, not in shadow) ---
-  setTimeout(() => {
-    const helper = document.createElement('div');
-    helper.className = 'chat-helper-bubble';
-    helper.innerText = 'Ciao! Come posso aiutarti? 😊';
-    document.body.appendChild(helper);
-    setTimeout(() => {
-      helper.classList.add('fade-out');
-      setTimeout(() => helper.remove(), 500);
-    }, 5000);
-  }, 2000);
+  // --- Fetch and inline CSS ---
+  const cssUrl = 'https://www.algogenex.com/n8n-chat-styles/style_voltest.css';
+  (async () => {
+    try {
+      const res = await fetch(cssUrl, { cache: 'no-cache', mode: 'cors' });
+      if (!res.ok) throw new Error('CSS fetch failed: ' + res.status);
+      let cssText = await res.text();
 
-  // --- import n8n chat bundle and start; pass the DOM element directly ---
-  // Use the same bundle path used in official examples. If you host your own script.js,
-  // replace the import path accordingly.
-  import('https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js')
-    .then(({ createChat }) => {
-      createChat({
-        webhookUrl: 'https://n8n.algogenex.com/webhook/ff6c311c-cfeb-4539-ac18-6de3eb238cb1/chat',
+      // Remove @font-face rules (avoids blocked fonts/CORS)
+      cssText = cssText.replace(/@font-face\s*\{[^}]*\}/gmi, '');
+
+      // Safety overrides: system fonts + visible chat
+      const safety = `
+        :host, :host * {
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial !important;
+        }
+        .chat-window {
+          display: block !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+        }
+      `;
+
+      const style = document.createElement('style');
+      style.textContent = cssText + '\n' + safety;
+      sr.appendChild(style);
+      console.log('Chat CSS inlined into shadow root');
+    } catch (err) {
+      console.error('Failed to fetch/inline CSS:', err);
+    }
+  })();
+
+  // --- Import and mount chat ---
+  const bundleUrl = 'https://www.algogenex.com/n8n-chat-styles/script.js';
+  (async () => {
+    try {
+      const module = await import(bundleUrl);
+      const createChat = module.createChat || module.default || module;
+      if (typeof createChat !== 'function') throw new Error('createChat not found in module');
+
+      await createChat({
+        webhookUrl: '', // set your webhook
         webhookConfig: { method: 'POST', headers: {} },
-        // PASS THE ELEMENT (not a selector)
         target: chatDiv,
         mode: 'window',
         chatInputKey: 'chatInput',
@@ -70,14 +87,24 @@
             subtitle: 'Scrivici! Siamo qui per aiutarti 24/7',
             footer: '',
             getStarted: 'Nuova Conversazione',
-            inputPlaceholder: 'Scrivi il tuo messaggio...',
-          },
+            inputPlaceholder: 'Scrivi il tuo messaggio...'
+          }
         },
-        enableStreaming: false,
+        enableStreaming: false
       });
-    })
-    .catch((err) => {
-      // graceful fallback if import fails (CSP, network, etc.)
-      console.error('Failed to load n8n chat bundle:', err);
-    });
+
+      // Auto-open chat
+      setTimeout(() => {
+        try {
+          const toggle = sr.querySelector('.chat-window-toggle');
+          if (toggle) toggle.click();
+          const win = sr.querySelector('.chat-window');
+          if (win) Object.assign(win.style, { display: 'block', opacity: '1', visibility: 'visible' });
+        } catch (e) { console.warn('Auto-open failed', e); }
+      }, 150);
+
+    } catch (err) {
+      console.error('Failed to load chat bundle:', err);
+    }
+  })();
 })();
