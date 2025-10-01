@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
 
 @charset "UTF-8";
-.n8n-chat {
+
+#n8n-chat-wrapper * {
+  all: unset;             /* resets most inherited styles */
+  box-sizing: border-box; /* avoids inherited box-sizing issues */
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#n8n-chat-wrapper .n8n-chat {
   font-family: 'Source Sans Pro', sans-serif;
 }
 .n8n-chat pre code.hljs {
