@@ -2,13 +2,9 @@
 
 @charset "UTF-8";
 
-#n8n-chat-wrapper * {
+.n8n-chat {
   all: unset;             /* resets most inherited styles */
-  box-sizing: border-box; /* avoids inherited box-sizing issues */
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-#n8n-chat-wrapper .n8n-chat {
+  box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
 }
 .n8n-chat pre code.hljs {
