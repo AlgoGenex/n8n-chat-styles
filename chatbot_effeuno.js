@@ -29,10 +29,9 @@
   // --- Chat container inside shadow ---
   const chatContainer = document.createElement("div");
   chatContainer.id = "n8n-chat";
-  shadow.appendChild(chatContainer);
 
-  // --- Import chat bundle and mount inside shadow ---
-  import("https://www.algogenex.com/n8n-chat-styles/script.mod.js").then(
+    // --- Import chat bundle and mount inside shadow ---
+  import("https://www.algogenex.com/n8n-chat-styles/script.js").then(
     ({ createChat }) => {
       createChat({
         webhookUrl: "",
@@ -40,7 +39,7 @@
           method: "POST",
           headers: {},
         },
-        target: chatContainer, // pass element, not selector
+        target: "#n8n-chat",
         mode: "window",
         chatInputKey: "chatInput",
         chatSessionKey: "sessionId",
@@ -62,6 +61,7 @@
       });
     }
   );
+  shadow.appendChild(chatContainer);
 
   // --- Helper bubble outside shadow (optional) ---
   setTimeout(() => {
