@@ -8,14 +8,14 @@
   // --- Load chat CSS ---
   const link = document.createElement("link");
   link.rel = "stylesheet";
-  link.href = "https://www.algogenex.com/n8n-chat-styles/style_voltest.css";
+  link.href = "https://www.algogenex.com/n8n-chat-styles/style_effeuno_mod.css";
   document.head.appendChild(link);
 
   // --- Load preload image (optional) ---
   const preload = document.createElement("link");
   preload.rel = "preload";
   preload.as = "image";
-  preload.href = "https://github.com/AlgoGenex/AlgoGenex.github.io/blob/main/demo/voltest_logo.webp";
+  preload.href = "https://github.com/AlgoGenex/AlgoGenex.github.io/blob/main/demo/effeuno_logo.webp";
   document.head.appendChild(preload);
 
   // --- Create chat container ---
