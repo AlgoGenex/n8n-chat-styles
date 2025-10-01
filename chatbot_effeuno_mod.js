@@ -132,9 +132,8 @@
     Object.assign(errNode.style, { padding: '12px', fontSize: '13px', background: '#fee', color: '#900' });
     chatDiv.appendChild(errNode);
   }
-})();
 
-// --- Helper bubble inside shadow ---
+  // --- Helper bubble inside shadow ---
 setTimeout(() => {
   const helper = document.createElement("div");
   helper.className = "chat-helper-bubble";
@@ -162,3 +161,4 @@ setTimeout(() => {
     setTimeout(() => helper.remove(), 500);
   }, 5000);
 }, 2000);
+})();
