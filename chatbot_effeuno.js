@@ -2,37 +2,45 @@
 
 (function () {
   // --- Persistent Session ID ---
-  const sid = localStorage.getItem('n8nChatSid') || crypto.randomUUID();
-  localStorage.setItem('n8nChatSid', sid);
+  const sid = localStorage.getItem("n8nChatSid") || crypto.randomUUID();
+  localStorage.setItem("n8nChatSid", sid);
 
-  // --- Load chat CSS ---
+  // --- Create host container ---
+  const host = document.createElement("div");
+  document.body.appendChild(host);
+
+  // --- Attach Shadow DOM ---
+  const shadow = host.attachShadow({ mode: "open" });
+
+  // --- Load chat CSS INSIDE shadow ---
   const link = document.createElement("link");
   link.rel = "stylesheet";
   link.href = "https://www.algogenex.com/n8n-chat-styles/style_voltest.css";
-  document.head.appendChild(link);
+  shadow.appendChild(link);
 
   // --- Load preload image (optional) ---
   const preload = document.createElement("link");
   preload.rel = "preload";
   preload.as = "image";
-  preload.href = "https://github.com/AlgoGenex/AlgoGenex.github.io/blob/main/demo/voltest_logo.webp";
-  document.head.appendChild(preload);
+  preload.href =
+    "https://github.com/AlgoGenex/AlgoGenex.github.io/blob/main/demo/voltest_logo.webp";
+  shadow.appendChild(preload);
 
-  // --- Create chat container ---
-  const div = document.createElement("div");
-  div.id = "n8n-chat";
-  document.body.appendChild(div);
+  // --- Chat container inside shadow ---
+  const chatContainer = document.createElement("div");
+  chatContainer.id = "n8n-chat";
+  shadow.appendChild(chatContainer);
 
-  // --- Import chat bundle and start ---
-  import("https://www.algogenex.com/n8n-chat-styles/script.js")
-    .then(({ createChat }) => {
+  // --- Import chat bundle and mount inside shadow ---
+  import("https://www.algogenex.com/n8n-chat-styles/script.js").then(
+    ({ createChat }) => {
       createChat({
-        webhookUrl: "https://n8n.algogenex.com/webhook/ff6c311c-cfeb-4539-ac18-6de3eb238cb1/chat",
+        webhookUrl: "",
         webhookConfig: {
           method: "POST",
           headers: {},
         },
-        target: "#n8n-chat",
+        target: chatContainer, // pass element, not selector
         mode: "window",
         chatInputKey: "chatInput",
         chatSessionKey: "sessionId",
@@ -52,9 +60,10 @@
         },
         enableStreaming: false,
       });
-    });
+    }
+  );
 
-  // --- Helper bubble ---
+  // --- Helper bubble outside shadow (optional) ---
   setTimeout(() => {
     const helper = document.createElement("div");
     helper.className = "chat-helper-bubble";
