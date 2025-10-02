@@ -958,7 +958,7 @@ body[data-theme=dark] .hljs-deletion {
   display: inline-block;
   width: 150px;   /* adjust size */
   height: 40px;
-  background: url('https://github.com/AlgoGenex/AlgoGenex.github.io/blob/main/demo/effeuno_logo.webp') no-repeat center/contain;
+  background: url('https://github.com/AlgoGenex/AlgoGenex.github.io/blob/main/demo/effeuno_logo.png') no-repeat center/contain;
   flex-shrink: 0;   /* prevent logo from shrinking */
   margin-top: 0;
 }
