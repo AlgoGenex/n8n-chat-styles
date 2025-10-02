@@ -1,6 +1,6 @@
 // chat-loader-shadow-adopted.js
 (async function () {
-  const SID_KEY = 'n8nChatSid';
+  // --- Persistent Session ID ---
   const sid = localStorage.getItem('n8nChatSid') || crypto.randomUUID();
   localStorage.setItem('n8nChatSid', sid);
 
