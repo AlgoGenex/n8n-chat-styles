@@ -1,8 +1,8 @@
 // chat-loader-shadow-adopted.js
 (async function () {
-  // --- Persistent Session ID ---
-  const sid = localStorage.getItem('n8nChatSid') || crypto.randomUUID();
-  localStorage.setItem('n8nChatSid', sid);
+  const SID_KEY = 'n8nChatSid';
+  const sid = localStorage.getItem(SID_KEY) || crypto.randomUUID();
+  localStorage.setItem(SID_KEY, sid);
 
   const cssUrl = 'https://www.algogenex.com/n8n-chat-styles/style_effeuno.css'; // change if needed
   const bundleUrl = 'https://www.algogenex.com/n8n-chat-styles/script.js';     // change if needed
@@ -10,12 +10,24 @@
   // 1) create host and attach shadow root
   const host = document.createElement('div');
   host.className = 'n8n-chat-host';
+  Object.assign(host.style, {
+    position: 'fixed',
+    right: '20px',
+    bottom: '20px',
+    width: '360px',
+    height: '600px',
+    zIndex: '2147483647',
+    display: 'block',
+    pointerEvents: 'auto',
+    overflow: 'visible'
+  });
   document.body.appendChild(host);
   const sr = host.attachShadow({ mode: 'open' });
 
   // 2) make a container for the chat UI
   const chatDiv = document.createElement('div');
   chatDiv.id = 'n8n-chat';
+  Object.assign(chatDiv.style, { width: '100%', height: '100%', minHeight: '200px' });
   sr.appendChild(chatDiv);
 
   // 3) fetch CSS text and preprocess it
@@ -85,6 +97,7 @@
   try {
     const module = await import(bundleUrl);
     const createChat = module.createChat || module.default || module;
+    if (typeof createChat !== 'function') throw new Error('createChat not exported from module');
 
     await createChat({
       webhookUrl: '', // set your webhook URL
@@ -109,17 +122,30 @@
       },
       enableStreaming: false
     });
+
+    console.log('n8n: chat mounted inside shadow root');
+  } catch (err) {
+    console.error('n8n: failed to import/mount chat bundle:', err);
+    // show minimal error inside shadow so you at least see something
+    const errNode = document.createElement('div');
+    errNode.textContent = 'Chat failed to load — check console.';
+    Object.assign(errNode.style, { padding: '12px', fontSize: '13px', background: '#fee', color: '#900' });
+    chatDiv.appendChild(errNode);
   }
 
   // --- Helper bubble inside shadow ---
 setTimeout(() => {
   const helper = document.createElement("div");
   helper.className = "chat-helper-bubble";
-  helper.innerText = "Ciao! Come posso aiutarti? 😊";
+  helper.innerText = "Hi! How can I help you? 😊";
 
   sr.appendChild(helper);
 
   // fade out after 5s
+  //setTimeout(() => {
+    //helper.style.opacity = "0";
+    //setTimeout(() => helper.remove(), 500);
+  //}, 5000);
   setTimeout(() => {
     helper.style.opacity = "0";
     setTimeout(() => helper.remove(), 500);
