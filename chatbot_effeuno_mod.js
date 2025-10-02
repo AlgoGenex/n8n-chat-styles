@@ -10,24 +10,12 @@
   // 1) create host and attach shadow root
   const host = document.createElement('div');
   host.className = 'n8n-chat-host';
-  Object.assign(host.style, {
-    position: 'fixed',
-    right: '20px',
-    bottom: '20px',
-    width: '360px',
-    height: '600px',
-    zIndex: '2147483647',
-    display: 'block',
-    pointerEvents: 'auto',
-    overflow: 'visible'
-  });
   document.body.appendChild(host);
   const sr = host.attachShadow({ mode: 'open' });
 
   // 2) make a container for the chat UI
   const chatDiv = document.createElement('div');
   chatDiv.id = 'n8n-chat';
-  Object.assign(chatDiv.style, { width: '100%', height: '100%', minHeight: '200px' });
   sr.appendChild(chatDiv);
 
   // 3) fetch CSS text and preprocess it
@@ -137,7 +125,7 @@
 setTimeout(() => {
   const helper = document.createElement("div");
   helper.className = "chat-helper-bubble";
-  helper.innerText = "Hi! How can I help you? 😊";
+  helper.innerText = "Ciao! Come posso aiutarti? 😊";
 
   sr.appendChild(helper);
 
