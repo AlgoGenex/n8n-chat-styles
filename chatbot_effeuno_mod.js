@@ -160,5 +160,5 @@ setTimeout(() => {
     //helper.style.opacity = "0";
     //setTimeout(() => helper.remove(), 500);
   //}, 5000);
-//}, 2000);
+}, 2000);
 })();
