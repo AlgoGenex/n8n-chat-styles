@@ -1,8 +1,8 @@
 // chat-loader-shadow-adopted.js
 (async function () {
   const SID_KEY = 'n8nChatSid';
-  const sid = localStorage.getItem(SID_KEY) || crypto.randomUUID();
-  localStorage.setItem(SID_KEY, sid);
+  const sid = localStorage.getItem('n8nChatSid') || crypto.randomUUID();
+  localStorage.setItem('n8nChatSid', sid);
 
   const cssUrl = 'https://www.algogenex.com/n8n-chat-styles/style_effeuno.css'; // change if needed
   const bundleUrl = 'https://www.algogenex.com/n8n-chat-styles/script.js';     // change if needed
