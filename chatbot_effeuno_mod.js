@@ -100,7 +100,7 @@
     if (typeof createChat !== 'function') throw new Error('createChat not exported from module');
 
     await createChat({
-      webhookUrl: '', // set your webhook URL
+      webhookUrl: 'https://n8n.algogenex.com/webhook/ff6c311c-cfeb-4539-ac18-6de3eb238cb1/chat',
       webhookConfig: { method: 'POST', headers: {} },
       target: chatDiv, // PASS THE ELEMENT so it mounts inside the shadow
       mode: 'window',
