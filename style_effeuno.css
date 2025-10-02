@@ -2148,7 +2148,7 @@ ul.user-stack-list li:hover {
 .chat-helper-bubble {
   position: absolute;
   right: 0px;    
-  bottom: 105px;   
+  bottom: 75px;   
   background: var(--chat--color-primary);
   color: var(--chat--color-white);
   font-family: 'Source Sans Pro', sans-serif;
@@ -2166,8 +2166,8 @@ ul.user-stack-list li:hover {
 .chat-helper-bubble::after {
   content: '';
   position: absolute;
-  bottom: -10px;
-  right: 0px;
+  bottom: -12px;
+  right: 15px;
   border-width: 6px;
   border-style: solid;
   border-color: var(--chat--color-primary) transparent transparent transparent;
