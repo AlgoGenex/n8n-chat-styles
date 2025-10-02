@@ -110,15 +110,6 @@
       },
       enableStreaming: false
     });
-
-    console.log('n8n: chat mounted inside shadow root');
-  } catch (err) {
-    console.error('n8n: failed to import/mount chat bundle:', err);
-    // show minimal error inside shadow so you at least see something
-    const errNode = document.createElement('div');
-    errNode.textContent = 'Chat failed to load — check console.';
-    Object.assign(errNode.style, { padding: '12px', fontSize: '13px', background: '#fee', color: '#900' });
-    chatDiv.appendChild(errNode);
   }
 
   // --- Helper bubble inside shadow ---
