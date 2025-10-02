@@ -85,7 +85,6 @@
   try {
     const module = await import(bundleUrl);
     const createChat = module.createChat || module.default || module;
-    if (typeof createChat !== 'function') throw new Error('createChat not exported from module');
 
     await createChat({
       webhookUrl: '', // set your webhook URL
