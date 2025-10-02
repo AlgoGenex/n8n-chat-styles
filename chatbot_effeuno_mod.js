@@ -142,9 +142,9 @@ setTimeout(() => {
   sr.appendChild(helper);
 
   // fade out after 5s
-  setTimeout(() => {
-    helper.style.opacity = "0";
-    setTimeout(() => helper.remove(), 500);
-  }, 5000);
+  //setTimeout(() => {
+    //helper.style.opacity = "0";
+    //setTimeout(() => helper.remove(), 500);
+  //}, 5000);
 }, 2000);
 })();
