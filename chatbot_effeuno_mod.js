@@ -139,26 +139,12 @@ setTimeout(() => {
   helper.className = "chat-helper-bubble";
   helper.innerText = "Hi! How can I help you? 😊";
 
-  Object.assign(helper.style, {
-    position: "absolute",
-    bottom: "80px",   // leave space above toggle
-    right: "20px",
-    background: "#4cafef",
-    color: "#fff",
-    padding: "10px 14px",
-    borderRadius: "16px",
-    fontSize: "14px",
-    boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
-    cursor: "pointer",
-    transition: "opacity 0.5s ease"
-  });
-
   sr.appendChild(helper);
 
   // fade out after 5s
-  //setTimeout(() => {
-    //helper.style.opacity = "0";
-    //setTimeout(() => helper.remove(), 500);
-  //}, 5000);
+  setTimeout(() => {
+    helper.style.opacity = "0";
+    setTimeout(() => helper.remove(), 500);
+  }, 5000);
 }, 2000);
 })();
