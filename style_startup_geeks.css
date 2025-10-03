@@ -2166,7 +2166,7 @@ ul.user-stack-list li:hover {
 .chat-helper-bubble::after {
   content: '';
   position: absolute;
-  bottom: -12px;
+  bottom: -11px;
   right: 15px;
   border-width: 6px;
   border-style: solid;
