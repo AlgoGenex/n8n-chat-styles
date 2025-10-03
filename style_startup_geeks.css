@@ -82,8 +82,8 @@
 
 :root {
 	--chat--color-primary: #0865C9;
-	--chat--color-primary-shade-50: #FE3D3C;
-	--chat--color-primary-shade-100: #FE3D3C;
+	--chat--color-primary-shade-50: #05407D;
+	--chat--color-primary-shade-100: #E7F2FE;
 	--chat--color-secondary: #FE3D3C;
 	--chat--color-secondary-shade-50: #FE3D3C;
 	--chat--color-white: #ffffff;
@@ -111,9 +111,9 @@
 	--chat--header-height: 100px;
 	--chat--header--padding: var(--chat--spacing);
 	--chat--header--background: var(--chat--color-white);
-	--chat--header--color: var(--chat--color-secondary);
+	--chat--header--color: var(--chat--color-primary-shade-50);
 	--chat--header--border-top: none solid var(--chat--border--color);
-	--chat--header--border-bottom: 2px solid var(--chat--border--color);
+	--chat--header--border-bottom: 1px solid var(--chat--border--color);
 	--chat--header--border-left: none solid var(--chat--border--color);
 	--chat--header--border-right: none solid var(--chat--border--color);
 	--chat--heading--font-size: 0px;
@@ -169,10 +169,10 @@
 	--chat--input--file--button--background-hover: var(--chat--input--file--button--background);
 	--chat--input--file--button--color-hover: var(--chat--color-secondary-shade-50);
 	--chat--files-spacing: 2.5px;
-	--chat--body--background: var(--chat--color-light);
+	--chat--body--background: var(--chat--color-primary-shade-100);
 	--chat--footer--background: var(--chat--color-white);
 	--chat--footer--color: var(--chat--color-dark);
-	--chat--footer--border-top: 2px solid var(--chat--border--color);
+	--chat--footer--border-top: 1px solid var(--chat--border--color);
 }
 
 pre code.hljs {
