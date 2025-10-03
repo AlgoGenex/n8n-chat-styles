@@ -81,9 +81,9 @@
 }
 
 :root {
-	--chat--color-primary: #D10018;
-	--chat--color-primary-shade-50: #0F4173;
-	--chat--color-primary-shade-100: #0F4173;
+	--chat--color-primary: #0865C9;
+	--chat--color-primary-shade-50: #FE3D3C;
+	--chat--color-primary-shade-100: #FE3D3C;
 	--chat--color-secondary: #144D90;
 	--chat--color-secondary-shade-50: #69C0C5;
 	--chat--color-white: #ffffff;
