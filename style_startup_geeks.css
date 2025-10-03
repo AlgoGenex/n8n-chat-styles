@@ -960,7 +960,7 @@ body[data-theme=dark] .hljs-deletion {
   height: 40px;
   background: url('https://raw.githubusercontent.com/AlgoGenex/AlgoGenex.github.io/refs/heads/main/demo/sgeeks-logo.webp') no-repeat center/contain;
   flex-shrink: 0;   /* prevent logo from shrinking */
-  margin-top: 15;
+  margin-top: 15px;
 }
 
 
