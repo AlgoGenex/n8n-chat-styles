@@ -93,7 +93,7 @@
 	--chat--color-medium: #d2d4d9;
 	--chat--color-dark: #494949;
 	--chat--color-disabled: #ffffff;
-	--chat--color-typing: #404040;
+	--chat--color-typing: var(--chat--color-white);
 	--chat--border--color: var(--chat--color-light);
 	--chat--scrollbar--color: #8B8B8B;
 	--chat--spacing: 10px;
