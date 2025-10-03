@@ -116,7 +116,7 @@
 	--chat--header--border-bottom: 2px solid var(--chat--border--color);
 	--chat--header--border-left: none solid var(--chat--border--color);
 	--chat--header--border-right: none solid var(--chat--border--color);
-	--chat--heading--font-size: 20px;
+	--chat--heading--font-size: 0px;
 	--chat--subtitle--font-size: 15px;
 	--chat--subtitle--line-height: 1;
 	--chat--message--font-size: 15px;
@@ -941,7 +941,7 @@ body[data-theme=dark] .hljs-deletion {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 5px;
+	gap: 0px;
 	height: var(--chat--header-height);
 	padding: var(--chat--header--padding);
 	background: var(--chat--header--background);
@@ -956,11 +956,11 @@ body[data-theme=dark] .hljs-deletion {
 .chat-layout .chat-header::before {
   content: '';
   display: inline-block;
-  width: 150px;   /* adjust size */
+  width: 175px;   /* adjust size */
   height: 40px;
   background: url('https://raw.githubusercontent.com/AlgoGenex/AlgoGenex.github.io/refs/heads/main/demo/sgeeks-logo.webp') no-repeat center/contain;
   flex-shrink: 0;   /* prevent logo from shrinking */
-  margin-top: 0;
+  margin-top: 15;
 }
 
 
