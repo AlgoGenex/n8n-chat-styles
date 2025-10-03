@@ -4,7 +4,7 @@
   const sid = localStorage.getItem(SID_KEY) || crypto.randomUUID();
   localStorage.setItem(SID_KEY, sid);
 
-  const cssUrl = 'https://www.algogenex.com/n8n-chat-styles/style_effeuno.css'; // change if needed
+  const cssUrl = 'https://www.algogenex.com/n8n-chat-styles/style_startup_geeks.css'; // change if needed
   const bundleUrl = 'https://www.algogenex.com/n8n-chat-styles/script.js';     // change if needed
 
   // 1) create host and attach shadow root
@@ -113,7 +113,7 @@
       initialMessages: ['Ciao! Come posso aiutarti? 😊'],
       i18n: {
         en: {
-          title: 'Effeuno Car Detailing',
+          title: '',
           subtitle: 'Scrivici! Siamo qui per aiutarti 24/7',
           footer: '',
           getStarted: 'Nuova Conversazione',
@@ -137,7 +137,7 @@
 setTimeout(() => {
   const helper = document.createElement("div");
   helper.className = "chat-helper-bubble";
-  helper.innerText = "Hi! How can I help you? 😊";
+  helper.innerText = "Ciao! Come posso aiutarti? 😊";
 
   sr.appendChild(helper);
 
