@@ -81,11 +81,11 @@
 }
 
 :root {
-	--chat--color-primary: #D10018;
-	--chat--color-primary-shade-50: #0F4173;
-	--chat--color-primary-shade-100: #0F4173;
-	--chat--color-secondary: #F67165;
-	--chat--color-secondary-shade-50: #69C0C5;
+	--chat--color-primary: #0865C9;
+	--chat--color-primary-shade-50: #05407D;
+	--chat--color-primary-shade-100: #E7F2FE;
+	--chat--color-secondary: #FE3D3C;
+	--chat--color-secondary-shade-50: #FE3D3C;
 	--chat--color-white: #ffffff;
 	--chat--color-light: #D7D7D7;
 	--chat--color-light-shade-50: #e6e9f1;
@@ -93,7 +93,7 @@
 	--chat--color-medium: #d2d4d9;
 	--chat--color-dark: #494949;
 	--chat--color-disabled: #ffffff;
-	--chat--color-typing: #404040;
+	--chat--color-typing: var(--chat--color-white);
 	--chat--border--color: var(--chat--color-light);
 	--chat--scrollbar--color: #8B8B8B;
 	--chat--spacing: 10px;
@@ -111,12 +111,12 @@
 	--chat--header-height: 100px;
 	--chat--header--padding: var(--chat--spacing);
 	--chat--header--background: var(--chat--color-white);
-	--chat--header--color: var(--chat--color-secondary);
+	--chat--header--color: var(--chat--color-primary-shade-50);
 	--chat--header--border-top: none solid var(--chat--border--color);
-	--chat--header--border-bottom: 2px solid var(--chat--border--color);
+	--chat--header--border-bottom: 1px solid var(--chat--border--color);
 	--chat--header--border-left: none solid var(--chat--border--color);
 	--chat--header--border-right: none solid var(--chat--border--color);
-	--chat--heading--font-size: 20px;
+	--chat--heading--font-size: 0px;
 	--chat--subtitle--font-size: 15px;
 	--chat--subtitle--line-height: 1;
 	--chat--message--font-size: 15px;
@@ -124,8 +124,8 @@
 	--chat--message--border-radius: 20px;
 	--chat--message-line-height: 1.5;
 	--chat--message--margin-bottom: calc(var(--chat--spacing) * 1);
-	--chat--message--bot--background: var(--chat--color-white);
-	--chat--message--bot--color: var(--chat--color-secondary);
+	--chat--message--bot--background: var(--chat--color-primary);
+	--chat--message--bot--color: var(--chat--color-white);
 	--chat--message--bot--border: none;
 	--chat--message--user--background: var(--chat--color-secondary);
 	--chat--message--user--color: var(--chat--color-white);
@@ -169,10 +169,10 @@
 	--chat--input--file--button--background-hover: var(--chat--input--file--button--background);
 	--chat--input--file--button--color-hover: var(--chat--color-secondary-shade-50);
 	--chat--files-spacing: 2.5px;
-	--chat--body--background: var(--chat--color-dark);
+	--chat--body--background: var(--chat--color-primary-shade-100);
 	--chat--footer--background: var(--chat--color-white);
 	--chat--footer--color: var(--chat--color-dark);
-	--chat--footer--border-top: 2px solid var(--chat--border--color);
+	--chat--footer--border-top: 1px solid var(--chat--border--color);
 }
 
 pre code.hljs {
@@ -941,7 +941,7 @@ body[data-theme=dark] .hljs-deletion {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 5px;
+	gap: 0px;
 	height: var(--chat--header-height);
 	padding: var(--chat--header--padding);
 	background: var(--chat--header--background);
@@ -956,11 +956,11 @@ body[data-theme=dark] .hljs-deletion {
 .chat-layout .chat-header::before {
   content: '';
   display: inline-block;
-  width: 150px;   /* adjust size */
+  width: 175px;   /* adjust size */
   height: 40px;
-  background: url('https://github.com/AlgoGenex/AlgoGenex.github.io/blob/main/demo/effeuno_logo.png') no-repeat center/contain;
+  background: url('https://raw.githubusercontent.com/AlgoGenex/AlgoGenex.github.io/refs/heads/main/demo/sgeeks-logo.webp') no-repeat center/contain;
   flex-shrink: 0;   /* prevent logo from shrinking */
-  margin-top: 0;
+  margin-top: 15px;
 }
 
 
@@ -2166,7 +2166,7 @@ ul.user-stack-list li:hover {
 .chat-helper-bubble::after {
   content: '';
   position: absolute;
-  bottom: -12px;
+  bottom: -11px;
   right: 15px;
   border-width: 6px;
   border-style: solid;
