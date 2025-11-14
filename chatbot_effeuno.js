@@ -29,6 +29,8 @@
   chatDiv.id = 'n8n-chat';
   Object.assign(chatDiv.style, { width: '100%', height: '100%', minHeight: '200px' });
   sr.appendChild(chatDiv);
+  
+  chatDiv.setAttribute('tabindex', '0');
 
   // 3) fetch CSS text and preprocess it
   let cssText = '';
