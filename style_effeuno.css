@@ -937,10 +937,8 @@ body[data-theme=dark] .hljs-deletion {
 
 .chat-layout .chat-header {
     display: flex;
-    flex-direction: row;     /* logo on left, text on right */
-    flex-wrap: wrap;         /* allow h1 and p to wrap below each other */
+    flex-direction: row;
     align-items: center;
-    gap: 20px;
 
     height: var(--chat--header-height);
     padding: var(--chat--header--padding);
