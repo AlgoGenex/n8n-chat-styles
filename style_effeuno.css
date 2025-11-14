@@ -937,8 +937,11 @@ body[data-theme=dark] .hljs-deletion {
 
 .chat-layout .chat-header {
     display: flex;
-    justify-content: center;
+    flex-direction: row;     /* logo on left, text on right */
+    flex-wrap: wrap;         /* allow h1 and p to wrap below each other */
     align-items: center;
+    gap: 20px;
+
     height: var(--chat--header-height);
     padding: var(--chat--header--padding);
     background: var(--chat--header--background);
@@ -950,14 +953,10 @@ body[data-theme=dark] .hljs-deletion {
     box-sizing: border-box;
 }
 
-.chat-header-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px; /* space between logo and text */
-}
-
-.chat-logo {
+/* LOGO ON LEFT */
+.chat-layout .chat-header::before {
+    content: "";
+    display: block;
     width: 120px;
     height: 120px;
     background: url(https://raw.githubusercontent.com/AlgoGenex/AlgoGenex.github.io/refs/heads/main/demo/effeuno_logo.webp)
@@ -965,25 +964,24 @@ body[data-theme=dark] .hljs-deletion {
     flex-shrink: 0;
 }
 
-.chat-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* TEXT STACKS ON THE RIGHT */
+.chat-layout .chat-header h1,
+.chat-layout .chat-header p {
+    width: 100%;    /* makes them move to their own line */
+    margin: 0;
 }
 
+/* Typography */
 .chat-layout .chat-header h1 {
-    margin: 0;
     font-size: var(--chat--heading--font-size);
     color: var(--chat--header--color);
 }
 
 .chat-layout .chat-header p {
-    margin: 0;
     font-size: var(--chat--subtitle--font-size);
     line-height: var(--chat--subtitle--line-height);
     font-weight: 600;
 }
-
 
 .chat-layout .chat-body {
 	background: var(--chat--body--background);
