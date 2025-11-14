@@ -928,6 +928,10 @@ body[data-theme=dark] .hljs-deletion {
 	margin-left: .4rem;
 }
 
+.chat-layout .chat-wrapper {
+	overflow-y: auto;
+}
+
 .chat-layout {
 	width: 100%;
 	height: 100%;
