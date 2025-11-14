@@ -936,42 +936,54 @@ body[data-theme=dark] .hljs-deletion {
 }
 
 .chat-layout .chat-header {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 0px;
-	height: var(--chat--header-height);
-	padding: var(--chat--header--padding);
-	background: var(--chat--header--background);
-	color: var(--chat--header--color);
-	border-top: var(--chat--header--border-top);
-	border-bottom: var(--chat--header--border-bottom);
-	border-left: var(--chat--header--border-left);
-	border-right: var(--chat--header--border-right);
-	box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--chat--header-height);
+    padding: var(--chat--header--padding);
+    background: var(--chat--header--background);
+    color: var(--chat--header--color);
+    border-top: var(--chat--header--border-top);
+    border-bottom: var(--chat--header--border-bottom);
+    border-left: var(--chat--header--border-left);
+    border-right: var(--chat--header--border-right);
+    box-sizing: border-box;
 }
 
-.chat-layout .chat-header::before {
-    content: "";
-    display: inline-block;
+.chat-header-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px; /* space between logo and text */
+}
+
+.chat-logo {
     width: 120px;
     height: 120px;
-    background: url(https://raw.githubusercontent.com/AlgoGenex/AlgoGenex.github.io/refs/heads/main/demo/effeuno_logo.webp) center center / contain no-repeat;
+    background: url(https://raw.githubusercontent.com/AlgoGenex/AlgoGenex.github.io/refs/heads/main/demo/effeuno_logo.webp)
+        center center / contain no-repeat;
     flex-shrink: 0;
-    margin-top: 75px;
 }
 
+.chat-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .chat-layout .chat-header h1 {
-	font-size: var(--chat--heading--font-size);
-	color: var(--chat--header--color);
+    margin: 0;
+    font-size: var(--chat--heading--font-size);
+    color: var(--chat--header--color);
 }
 
 .chat-layout .chat-header p {
-	font-size: var(--chat--subtitle--font-size);
-	line-height: var(--chat--subtitle--line-height);
-   font-weight: 600;
+    margin: 0;
+    font-size: var(--chat--subtitle--font-size);
+    line-height: var(--chat--subtitle--line-height);
+    font-weight: 600;
 }
+
 
 .chat-layout .chat-body {
 	background: var(--chat--body--background);
