@@ -115,7 +115,7 @@
     --chat--header--background: var(--chat--color-primary);
     --chat--header--border-left: none solid var(--chat--border--color);
     --chat--header--border-right: none solid var(--chat--border--color);
-	--chat--header--border-bottom: 1px solid var(--chat--border--color);
+	--chat--header--border-bottom: 1px solid var(--chat--color-dark);
     --chat--heading--font-size: 0px;
     --chat--subtitle--font-size: 15px;
     --chat--subtitle--line-height: 1;
