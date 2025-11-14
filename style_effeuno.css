@@ -928,10 +928,6 @@ body[data-theme=dark] .hljs-deletion {
 	margin-left: .4rem;
 }
 
-.chat-layout .chat-wrapper {
-	overflow-y: auto;
-}
-
 .chat-layout {
 	width: 100%;
 	height: 100%;
@@ -2149,14 +2145,12 @@ ul.user-stack-list li:hover {
   overflow-y: scroll;
   scrollbar-color: var(--chat--scrollbar--color) var(--chat--body--background);
   scrollbar-width: thin;
-  overscroll-behavior: contain;
 }
 
 .chat-inputs textarea[data-v-de5e7961] {
   overflow-y: scroll;
   scrollbar-color: var(--chat--footer--background) var(--chat--footer--background);
   scrollbar-width: thin;
-  overscroll-behavior: contain;
 }
 
 /* Helper bubble near bottom right above launcher */
