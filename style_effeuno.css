@@ -111,6 +111,7 @@
     --chat--window--margin-bottom: var(--chat--spacing);
     --chat--header-height: 100px;
     --chat--header--padding: 0px;
+	--chat--header--color: var(--chat--color-secondary-shade-50);
     --chat--header--background: var(--chat--color-primary);
     --chat--header--border-left: none solid var(--chat--border--color);
     --chat--header--border-right: none solid var(--chat--border--color);
@@ -978,6 +979,7 @@ body[data-theme=dark] .hljs-deletion {
 .chat-layout .chat-header p {
     font-size: var(--chat--subtitle--font-size);
     line-height: var(--chat--subtitle--line-height);
+	color: var(--chat--header--color);
     font-weight: 600;
 }
 
