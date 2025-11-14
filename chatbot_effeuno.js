@@ -137,7 +137,7 @@
 setTimeout(() => {
   const helper = document.createElement("div");
   helper.className = "chat-helper-bubble";
-  helper.innerText = "Hi! How can I help you? 😊";
+  helper.innerText = "Ciao! Come posso aiutarti? 😊";
 
   sr.appendChild(helper);
 
