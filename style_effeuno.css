@@ -933,7 +933,6 @@ body[data-theme=dark] .hljs-deletion {
 	height: 100%;
 	display: flex;
 	overflow-y: auto;
-	pointer-events: none !important;
 	flex-direction: column;
 	font-family: var(--chat--font-family);
 }
