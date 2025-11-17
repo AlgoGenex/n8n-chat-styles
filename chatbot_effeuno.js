@@ -32,9 +32,6 @@
   
   chatDiv.setAttribute('tabindex', '0');
 
-  // ENABLE WHEEL SCROLLING INSIDE SHADOW DOM
-  chatDiv.addEventListener("wheel", (e) => {e.stopPropagation();}, { passive: true });
-
   // 3) fetch CSS text and preprocess it
   let cssText = '';
   try {
@@ -129,6 +126,9 @@
     });
 
     console.log('n8n: chat mounted inside shadow root');
+
+    // ENABLE WHEEL SCROLLING INSIDE SHADOW DOM
+    chatDiv.addEventListener("wheel", (e) => {e.stopPropagation();}, { passive: true });
     
     chatDiv.addEventListener("wheel", (e) => {
       const scrollEl = sr.querySelector(".chat-body");
