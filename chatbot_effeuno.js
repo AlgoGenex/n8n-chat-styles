@@ -32,6 +32,9 @@
   
   chatDiv.setAttribute('tabindex', '0');
 
+  // ENABLE WHEEL SCROLLING INSIDE SHADOW DOM
+  chatDiv.addEventListener("wheel", (e) => {e.stopPropagation();}, { passive: true });
+
   // 3) fetch CSS text and preprocess it
   let cssText = '';
   try {
@@ -126,6 +129,14 @@
     });
 
     console.log('n8n: chat mounted inside shadow root');
+    
+    chatDiv.addEventListener("wheel", (e) => {
+      const scrollEl = sr.querySelector(".chat-body");
+      if (scrollEl) {scrollEl.scrollTop += e.deltaY;
+                     e.preventDefault();
+                    }
+    }, { passive: false });
+    
   } catch (err) {
     console.error('n8n: failed to import/mount chat bundle:', err);
     // show minimal error inside shadow so you at least see something
