@@ -992,6 +992,10 @@ body[data-theme=dark] .hljs-deletion {
 	overflow-y: auto;
 	position: relative;
 	min-height: 100px;
+	scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* iOS momentum scrolling */
+    overscroll-behavior: contain;       /* prevents page scroll leaking */
+    touch-action: pan-y;                /* ensures vertical swiping works */
 }
 
 .chat-layout .chat-footer {
