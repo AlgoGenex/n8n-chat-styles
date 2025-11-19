@@ -88,7 +88,7 @@
     --chat--color-secondary-shade-50: #082544;
     --chat--color-white: #ffffff;
 	--chat--color-black: #000000;
-    --chat--color-light: #F8F8F8;
+    --chat--color-light: #D7D7D7;
     --chat--color-light-shade-50: #e6e9f1;
     --chat--color-light-shade-100: #c2c5cc;
     --chat--color-medium: #d2d4d9;
@@ -106,7 +106,7 @@
     --chat--window--bottom: var(--chat--spacing);
     --chat--window--right: var(--chat--spacing);
     --chat--window--z-index: 9999;
-    --chat--window--border: 0px solid var(--chat--border--color);
+    --chat--window--border: 1px solid var(--chat--border--color);
     --chat--window--border-radius: 20px;
     --chat--window--margin-bottom: var(--chat--spacing);
     --chat--header-height: 100px;
@@ -115,7 +115,7 @@
     --chat--header--background: var(--chat--color-white);
     --chat--header--border-left: none solid var(--chat--border--color);
     --chat--header--border-right: none solid var(--chat--border--color);
-	--chat--header--border-bottom: 1px solid var(--chat--color-dark);
+	--chat--header--border-bottom: 1px solid var(--chat--border-color);
     --chat--heading--font-size: 0px;
     --chat--subtitle--font-size: 15px;
     --chat--subtitle--line-height: 1;
