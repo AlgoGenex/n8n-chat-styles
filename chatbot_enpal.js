@@ -115,7 +115,7 @@
       initialMessages: ['Ciao! Come possiamo aiutarti? 😊'],
       i18n: {
         en: {
-          title: 'Effeuno Car Detailing',
+          title: '',
           subtitle: 'Scrivici! Siamo qui per aiutarti 24/7',
           footer: '',
           getStarted: 'Nuova Conversazione',
