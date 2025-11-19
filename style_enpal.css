@@ -975,7 +975,7 @@ body[data-theme=dark] .hljs-deletion {
 	color: var(--chat--header--color);
     font-weight: 600;
 	text-align: left;
-	margin-right: 15px;
+	padding-left: 17px;
 }
 
 .chat-layout .chat-body {
