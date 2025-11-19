@@ -125,7 +125,7 @@
     --chat--message-line-height: 1.5;
     --chat--message--margin-bottom: calc(var(--chat--spacing) * 1);
     --chat--message--bot--background: var(--chat--color-secondary);
-    --chat--message--bot--color: var(--chat--color-primary);
+    --chat--message--bot--color: var(--chat--color-white);
     --chat--message--bot--border: none;
     --chat--message--user--background: var(--chat--color-primary);
     --chat--message--user--color: var(--chat--color-secondary);
