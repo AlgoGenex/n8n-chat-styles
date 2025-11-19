@@ -102,7 +102,7 @@
     if (typeof createChat !== 'function') throw new Error('createChat not exported from module');
 
     await createChat({
-      webhookUrl: 'https://n8n.algogenex.com/webhook/ff6c311c-cfeb-4539-ac18-6de3eb238cb1/chat',
+      webhookUrl: 'https://n8n.algogenex.com/webhook/f12de781-7901-4f64-b2dc-beae01e3f7bf/chat',
       webhookConfig: { method: 'POST', headers: {} },
       target: chatDiv, // PASS THE ELEMENT so it mounts inside the shadow
       mode: 'window',
@@ -150,7 +150,7 @@
 setTimeout(() => {
   const helper = document.createElement("div");
   helper.className = "chat-helper-bubble";
-  helper.innerText = "Ciao! Come posso aiutarti? 😊";
+  helper.innerText = "Ciao! Come possiamo aiutarti? 😊";
 
   sr.appendChild(helper);
 
