@@ -112,7 +112,7 @@
       metadata: { sessionId: sid },
       showWelcomeScreen: false,
       defaultLanguage: 'en',
-      initialMessages: ['Ciao! Come posso aiutarti? 😊'],
+      initialMessages: ['Ciao! Come possiamo aiutarti? 😊'],
       i18n: {
         en: {
           title: 'Effeuno Car Detailing',
