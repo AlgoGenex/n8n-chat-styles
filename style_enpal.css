@@ -967,6 +967,7 @@ body[data-theme=dark] .hljs-deletion {
 .chat-layout .chat-header h1 {
     font-size: var(--chat--heading--font-size);
     color: var(--chat--header--color);
+	display: none;
 }
 
 .chat-layout .chat-header p {
