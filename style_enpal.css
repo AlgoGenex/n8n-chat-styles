@@ -89,7 +89,7 @@
     --chat--color-white: #ffffff;
 	--chat--color-black: #000000;
     --chat--color-light: #D7D7D7;
-    --chat--color-light-shade-50: #e6e9f1;
+    --chat--color-light-shade-50: #f1f1f1;
     --chat--color-light-shade-100: #c2c5cc;
     --chat--color-medium: #d2d4d9;
     --chat--color-dark: #181818;
@@ -169,7 +169,7 @@
     --chat--input--file--button--background-hover: var(--chat--input--file--button--background);
     --chat--input--file--button--color-hover: var(--chat--color-secondary-shade-50);
     --chat--files-spacing: 2.5px;
-    --chat--body--background: var(--chat--color-light);
+    --chat--body--background: var(--chat--color-light-shade-50);
     --chat--footer--background: var(--chat--color-white);
     --chat--footer--color: var(--chat--color-dark);
     --chat--footer--border-top: 1px solid var(--chat--border--color);
