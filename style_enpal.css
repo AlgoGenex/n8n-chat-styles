@@ -81,11 +81,11 @@
 }
 
 :root {
-	--chat--color-primary: #9B1409;
-    --chat--color-primary-shade-50: #FE3D3C;
-    --chat--color-primary-shade-100: #FE3D3C;
-    --chat--color-secondary: #EBEBD8;
-    --chat--color-secondary-shade-50: #E8DEA1;
+	--chat--color-primary: #FEB000;
+    --chat--color-primary-shade-50: #082544;
+    --chat--color-primary-shade-100: #082544;
+    --chat--color-secondary: #082544;
+    --chat--color-secondary-shade-50: #082544;
     --chat--color-white: #ffffff;
 	--chat--color-black: #000000;
     --chat--color-light: #D7D7D7;
@@ -953,7 +953,6 @@ body[data-theme=dark] .hljs-deletion {
     box-sizing: border-box;
 }
 
-/* LOGO ON LEFT */
 .chat-layout .chat-header::before {
 	content: '';
 	display: inline-block;
@@ -965,14 +964,6 @@ body[data-theme=dark] .hljs-deletion {
 	margin-top: 15px;
 }
 
-/* TEXT STACKS ON THE RIGHT */
-.chat-layout .chat-header h1,
-.chat-layout .chat-header p {
-    width: 100%;    /* makes them move to their own line */
-    margin: 0;
-}
-
-/* Typography */
 .chat-layout .chat-header h1 {
     font-size: var(--chat--heading--font-size);
     color: var(--chat--header--color);
