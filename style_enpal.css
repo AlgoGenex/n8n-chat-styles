@@ -974,6 +974,8 @@ body[data-theme=dark] .hljs-deletion {
     line-height: var(--chat--subtitle--line-height);
 	color: var(--chat--header--color);
     font-weight: 600;
+	text-align: left;
+	margin-right: 15px;
 }
 
 .chat-layout .chat-body {
