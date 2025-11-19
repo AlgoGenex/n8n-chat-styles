@@ -110,7 +110,7 @@
     --chat--window--border-radius: 20px;
     --chat--window--margin-bottom: var(--chat--spacing);
     --chat--header-height: 100px;
-    --chat--header--padding: 0px;
+    --chat--header--padding: var(--chat--spacing);
 	--chat--header--color: var(--chat--color-secondary);
     --chat--header--background: var(--chat--color-white);
     --chat--header--border-left: none solid var(--chat--border--color);
