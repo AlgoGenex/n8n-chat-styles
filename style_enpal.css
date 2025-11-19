@@ -967,7 +967,6 @@ body[data-theme=dark] .hljs-deletion {
 .chat-layout .chat-header h1 {
     font-size: var(--chat--heading--font-size);
     color: var(--chat--header--color);
-	display: none;
 }
 
 .chat-layout .chat-header p {
@@ -1970,7 +1969,7 @@ ul.user-stack-list li:hover {
 }
 
 .chat-heading {
-	display: flex;
+	display: none;
 	justify-content: space-between;
 	align-items: center;
 }
