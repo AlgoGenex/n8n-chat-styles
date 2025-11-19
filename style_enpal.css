@@ -938,10 +938,10 @@ body[data-theme=dark] .hljs-deletion {
 }
 
 .chat-layout .chat-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0px;
     height: var(--chat--header-height);
     padding: var(--chat--header--padding);
     background: var(--chat--header--background);
@@ -955,13 +955,14 @@ body[data-theme=dark] .hljs-deletion {
 
 /* LOGO ON LEFT */
 .chat-layout .chat-header::before {
-    content: "";
-    display: block;
-    width: 120px;
-    height: 120px;
+	content: '';
+	display: inline-block;
+	width: 175px;   /* adjust size */
+	height: 40px;
     background: url(https://raw.githubusercontent.com/AlgoGenex/AlgoGenex.github.io/refs/heads/main/demo/enpal-logo.webp)
         center center / contain no-repeat;
-    flex-shrink: 0;
+    flex-shrink: 0;   /* prevent logo from shrinking */
+	margin-top: 15px;
 }
 
 /* TEXT STACKS ON THE RIGHT */
